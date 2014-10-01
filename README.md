@@ -9,24 +9,32 @@ Ansible est orienté "push". La configuration est poussée par une machine maît
 
 Ce mode est intéressant car il nécessite pas de disposer d'une machine maître connue et publique. Ce sont les noeuds qui doivent être accessibles. Nous verrons plus loin que les noeuds cachés peuvent aussi tirer leur configuration.
 
-# Prerequisites for Ansible
+#Topologie de Lab
+La résolution de nom est activée
+- master : machine maître
+- node0 : premier noeud
+-node1 : second noeud
+- nodex : Xième noeud
 
-You need the following python modules on your machine (the machine you run ansible 
-on) 
+# Logiciels nécessaires sur master
+
+## Modules python
+Les modules python suivants doivent être disponible sur la machine maître :
 - python-yaml
 - python-jinja2
 
-On Debian/Ubuntu run:
+Avec une distribution Debian/Ubuntu exécutez:
 ``sudo apt-get install python-yaml python-jinja2 python-paramiko python-crypto``
 
-We're also assuming you have a keypair in your ~/.ssh directory.
+## Clés SSH
+Il aussi nécessaire de générer une paire de clés dans votre dossier ~/.ssh
 
-# Installing Ansible
 
-## From source
+# Installation de Ansible sur master
 
-Ansible devel branch is always usable, so we'll run straight from a git checkout.
-You might need to install git for this (`sudo apt-get install git` on Debian/Ubuntu).
+## Par les sources
+
+La brande Devel est toujours à disposition, on peut prendre le code à condition d'avoir installé git (`sudo apt-get install git` avec Debian/Ubuntu).
 
     git clone git://github.com/ansible/ansible.git
     cd ./ansible
