@@ -1,4 +1,4 @@
-Ansible tutorial
+Tutoriel Ansible
 ================
 
 Ce tutoriel présente ansible étape par étape. Vous avez besoin au minimum d'une machine (physique ou virtuelle) comme noeud ansible. Un environnement [vagrant](https://www.vagrantup.com/about.html) est fourni dans ce tutoriel.
