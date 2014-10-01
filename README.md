@@ -1,23 +1,13 @@
 Ansible tutorial
 ================
 
-Ce tutoriel présente ansible étape par étape. Vous avez besoin au minimum d'une machine (physique ou virtuelle) comme "node" ansible. Un environnement [vagrant](https://www.vagrantup.com/about.html) est fourni dans ce tutoriel.
+Ce tutoriel présente ansible étape par étape. Vous avez besoin au minimum d'une machine (physique ou virtuelle) comme noeud ansible. Un environnement [vagrant](https://www.vagrantup.com/about.html) est fourni dans ce tutoriel.
 
-Ansible is a configuration management software that let's you control and
-configure nodes from  another machine. What makes it different from other
-management software is that ansible  uses (potentially existing) SSH
-infrastructure, while others (chef, puppet, ...) need a specific PKI
-infrastructure to be set-up.
+Ansible est un logiciel de gestion de configuration qui vous permet de cotrôler et de configurer des noeuds à partir d'une seule machine. A la différence des autres logiciel de gestion comme chef, puppet, etc. qui ont besoin d'une infrastructure PKI spécifique, ansible utilise une infrastructure SSH commune à tout environnement Linux/BSD.
 
-Ansible also emphasises push mode, where configuration is pushed from a master
-machine (a master machine is only a machine where you can SSH to nodes from) to
-nodes, while most other CM typically do it the other way around (nodes pull
-their config at times from a master machine).
+Ansible est orienté "push". La configuration est poussée par une machine maître (celle qui peut accéder aux noeuds) Les alternatives disposent d'un mode "pull" où les noeuds prennent leur configuration d'une machine maître.
 
-This mode is really interesting since you do not need to have a 'publicly'
-accessible 'master' to be able to configure remote nodes: it's the nodes
-that need to be accessible (we'll see later that 'hidden' nodes can pull their
-configuration too!), and most of the time they are.
+Ce mode est intéressant car il nécessite pas de disposer d'une machine maître connue et publique. Ce sont les noeuds qui doivent être accessibles. Nous verrons plus loin que les noeuds cachés peuvent aussi tirer leur configuration.
 
 # Prerequisites for Ansible
 
