@@ -1,9 +1,7 @@
 Ansible tutorial
 ================
 
-This tutorial presents ansible step-by-step. You'll need to have a (virtual or
-physical) machine to act as an ansible node. A [vagrant](http://en.wikipedia.org/wiki/Vagrant_(software)) environment is provided for 
-going through this tutorial.
+Ce tutoriel présente ansible étape par étape. Vous avez besoin au minimum d'une machine (physique ou virtuelle) comme "node" ansible. Un environnement [vagrant](https://www.vagrantup.com/about.html) est fourni dans ce tutoriel.
 
 Ansible is a configuration management software that let's you control and
 configure nodes from  another machine. What makes it different from other
